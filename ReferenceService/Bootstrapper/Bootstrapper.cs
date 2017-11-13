@@ -14,6 +14,9 @@ namespace ReferenceService.Bootstrapper
 			// in the persistance store, but, more efficient to use a singleton.  
 			// No need for per request instances
 			container.Register<IManager, ManagersResource>().AsSingleton();
+
+			// You can use the following to test with a stubed persist store
+			//container.Register<IManager, ManagersResourceStub>().AsSingleton();
 		}
 	}
 }
